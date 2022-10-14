@@ -11,7 +11,7 @@ const router = Router()
 
 router.get("/", listProductscontroller)
 router.get("/:id", verifyIdProductMiddleware, getProductController)
-router.get("/category/:id", verifyIdProductMiddleware, listCategoryProductsController)
+router.get("/category/:id", listCategoryProductsController)
 router.post("/", CreateProductsController)
 router.patch("/:id", verifyIdProductMiddleware, patchProductsController)
 router.delete("/:id", verifyIdProductMiddleware, deleteProductController)
